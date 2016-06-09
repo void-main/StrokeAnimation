@@ -184,23 +184,19 @@ class AnimationView: UIView {
     }
 
     func animatePartTo(part: CAShapeLayer, startFrom: CGFloat, startTo: CGFloat, endFrom: CGFloat, endTo: CGFloat, rotationStart: CGFloat? = nil, rotationEnd: CGFloat? = nil, translationStart: CGFloat? = nil, translationEnd: CGFloat? = nil) {
-        part.strokeStart = startFrom
-        part.strokeEnd = endFrom
+        part.strokeStart = startTo
+        part.strokeEnd = endTo
 
         let anims: NSMutableArray = []
 
         let start = CABasicAnimation(keyPath: "strokeStart")
         start.fromValue = startFrom
         start.toValue = startTo
-        start.fillMode = kCAFillModeForwards
-        start.removedOnCompletion = false
         anims.addObject(start)
 
         let end = CABasicAnimation(keyPath: "strokeEnd")
         end.fromValue = endFrom
         end.toValue = endTo
-        end.fillMode = kCAFillModeForwards
-        start.removedOnCompletion = false
         anims.addObject(end)
 
         let group = CAAnimationGroup()
@@ -208,30 +204,23 @@ class AnimationView: UIView {
         group.duration = animationDuration
         group.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)
 
-        group.fillMode = kCAFillModeForwards
-        group.removedOnCompletion = false
-
         part.addAnimation(group, forKey: nil)
     }
 
     func animatePartRotation(part: CAShapeLayer, rotationStart: CGFloat, rotationEnd: CGFloat) {
-        part.setAffineTransform(CGAffineTransformMakeRotation(rotationStart))
+        part.setAffineTransform(CGAffineTransformMakeRotation(rotationEnd))
 
         let anims: NSMutableArray = []
 
         let anim = CABasicAnimation(keyPath: "transform.rotation")
         anim.fromValue = rotationStart
         anim.toValue = rotationEnd
-        anim.fillMode = kCAFillModeForwards
-        anim.removedOnCompletion = false
         anims.addObject(anim)
 
         let group = CAAnimationGroup()
         group.animations = anims as NSArray as? [CAAnimation]
         group.duration = animationDuration
         group.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)
-        group.fillMode = kCAFillModeForwards
-        group.removedOnCompletion = false
 
         part.addAnimation(group, forKey: nil)
     }
