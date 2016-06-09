@@ -12,6 +12,7 @@
 		DFEAB0071D09240800B007E0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DFEAB0051D09240800B007E0 /* Main.storyboard */; };
 		DFEAB0091D09240800B007E0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DFEAB0081D09240800B007E0 /* Assets.xcassets */; };
 		DFEAB00C1D09240800B007E0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DFEAB00A1D09240800B007E0 /* LaunchScreen.storyboard */; };
+		DFEAB0141D0924F900B007E0 /* AnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFEAB0131D0924F900B007E0 /* AnimationView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		DFEAB0081D09240800B007E0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DFEAB00B1D09240800B007E0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DFEAB00D1D09240800B007E0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DFEAB0131D0924F900B007E0 /* AnimationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimationView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +56,7 @@
 		DFEAB0001D09240800B007E0 /* StrokeAnimation */ = {
 			isa = PBXGroup;
 			children = (
+				DFEAB0131D0924F900B007E0 /* AnimationView.swift */,
 				DFEAB0011D09240800B007E0 /* AppDelegate.swift */,
 				DFEAB0031D09240800B007E0 /* ViewController.swift */,
 				DFEAB0051D09240800B007E0 /* Main.storyboard */,
@@ -135,6 +138,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DFEAB0141D0924F900B007E0 /* AnimationView.swift in Sources */,
 				DFEAB0041D09240800B007E0 /* ViewController.swift in Sources */,
 				DFEAB0021D09240800B007E0 /* AppDelegate.swift in Sources */,
 			);
